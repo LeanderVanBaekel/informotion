@@ -1,0 +1,375 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "lato";
+}
+
+.hidden {
+	opacity: 0;
+	display: none;
+	transition: all 1s ease-in-out;
+}
+
+.tooltip {
+	opacity: 0;
+	
+}
+
+.layer:hover .tooltip {
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+
+}
+
+.show {
+	display: block;
+	opacity: 1;
+}
+
+
+#main-container {
+	width: 100vw;
+	height: 100vh;
+	background-color: white;
+}
+
+#container {
+	margin: 0 auto;
+	width: 1440px;
+	min-height: 780px;
+	background-color: white;
+	position: relative;
+}
+
+video {
+	margin: 0 auto;
+	width: 100%;
+}
+
+#header {
+	width: 96%;
+	height: 90px;
+	padding-left: 4%;
+	background-color: #44A954;
+	color: white;
+	position: relative;
+}
+
+#header h1 {
+	padding: 0.15em 0 0 1em;
+}
+
+#header a img {
+	margin-top: 30px;
+}
+
+.results-header h1 {
+	margin-top: 0.11em;
+}
+
+#back {
+padding: 0.25em 0 0 0;
+
+}
+
+#video-link {
+	color: white;
+	margin-top: 1em;
+	display: block;
+	position: absolute;
+	right: 90px;
+	top: 15px;
+}
+
+#checkbox-list {
+	width: 64%;
+	height: 270px;
+	padding: 10px 30% 0 6%;
+	font-size: 0.9em;
+	background-color: #EFEFEF;
+  	-webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+
+#checkbox-list h1 {
+	font-size: 1.2em;
+	margin: 0.2em 0.2em 0.8em 0.2em;
+	z-index: 999;
+}
+
+#checkbox-list img {
+	height: 1.8em;
+	margin: 0.4em 0.4em -0.5em -0.5em;
+}
+
+#checkbox-list label {
+	display: block;
+	margin: 0.6em 0 0.6em 0.4em;
+}
+
+#checkbox-list input {
+	height: 1.5em;
+	margin: 0em 1em 0 0;
+}
+
+#checkbox-list label img{
+	width: .6em;
+	height: 100%;
+	margin: -.5em .1em 0 .1em;
+}
+#checkbox-list p img{
+	width: .6em;
+	height: 100%;
+	margin: -.5em .1em 0 .1em;
+	padding-left: .4em;
+	padding-right: .4em;
+	padding-top: 2em;
+}
+#checkbox-list p img:last-of-type{
+	margin-left: 1em;
+}
+
+#checkbox-list p:last-of-type{
+	margin-left: 1em;
+}
+
+.vote{
+	padding: 0.5em;
+	margin: 0 0 0 0.4em;
+	background-color: #66b661;
+	color: white;
+	font-weight: 600;
+	border: none;
+	font-size: 1em;
+	left: 566px;
+	top: 360px;
+	border-bottom: 5px solid #43a854;
+	position: absolute;
+	z-index: 99999;
+}
+
+#money-total-container {
+	width: 54%;
+	height: 70px;
+	padding: 0 40% 0 6%;
+	background-color: #EFEFEF;
+	font-size: 0.6em;
+}
+
+#money-total {
+	width: 100%;
+	height: 3em;
+	margin: 0 auto;
+}
+
+#money-total * {
+	display: inline-block;
+}
+
+#money-total h2:first-of-type {
+	font-size: 1.3em;
+	line-height: 1.1;
+}
+
+.number {
+	width: 1rem;
+	height: 1.5rem;
+	display: inline-block;
+	text-align: center;
+	background-color: white;
+}
+
+#goal-bar-container {
+	width: 92%;
+	height: 70px;
+	padding: 40px 4% 0 4%;
+	background-color: white;
+	text-align: center;
+	position: relative;
+}
+
+#goal-bar {
+	width: 95%;
+	height: 40px;
+	margin: 0 auto;
+	background-color: white;
+	border: 1px lightgray solid;
+	position: relative;
+}
+
+
+#goal-bar-fill {
+	width: 11.2%;
+	height: 100%;
+	font-weight: 700;
+	font-size: 1.2em;
+	line-height: 2.1em;
+	background-color: #E04A2F;
+	color: white;
+	transition: all 1s ease-in-out;
+}
+
+.goal-flag {
+	position: absolute;
+	width: 50px;
+	height: 95px;
+	left: 350px;
+	top: -55px;
+	background-image: url("../img/flag.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+	transition: all 1s ease-in-out;
+	z-index: 9999999;
+}
+
+.goal-flag-up {
+	background-position: bottom left;
+	transition: all 1s ease-in-out;
+}
+
+#goal-flag img {
+
+}
+
+#goal-overlay {
+	width: 70%;
+	height: 110px;
+	left: 30%;
+	top:0;
+	position: absolute;
+	background: rgba(255,255,255,0);
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0)), color-stop(50%, rgba(255,255,255,0.92)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.92) 50%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+}
+
+#info-container {
+	width: 92%;
+	height: 210px;
+	padding: 20px 2% 0 6%;
+	background-color: #44A954;
+	color: white;
+	font-weight: 300;
+}
+
+#info-icon {
+	width: 9%;
+	float: left;
+}
+
+#info-text-container {
+	width: 45%;
+	margin: 0 1em 0 0;
+	height: 90%;
+	float: left;
+}
+
+#info-project {
+	width: 25%;
+	margin: 10px 0 0 0;
+	float: left;
+}
+
+#project-title {
+	font-size: 1.6em;
+}
+
+#info-icon img {
+	width: 100px;
+	margin: 0 1em 1em 0em;
+}
+
+#project-location {
+	font-weight: 700;
+}
+
+#info-text {
+	margin: 0.5em 0 0 0;
+	height: 130px;
+}
+
+#info-link {
+	color: white;
+	margin-top: 1em;
+	display: block;
+}
+
+#project-cost, #project-gain, #project-time {
+	width: 200px;
+	height: 30px;
+	margin: 2px;
+	display: block;
+	background-color: white;
+	color: black;
+}
+
+
+#project-cost img, #project-gain img, #project-time img {
+	height: 24px;
+	margin: 3px 6px;
+	float: left;
+}
+
+#project-cost p, #project-gain p, #project-time p {
+	float: left;
+	margin: 3px 0px 0px 0px;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	left: 690px;
+	width: 650px;
+	height: 670px;
+}
+
+.share-container {
+	position: absolute;
+	top: 0;
+	right: 0px;
+	height: 780px;
+	width: 0px;
+	transition: all 1s ease-in-out;
+}
+
+.share-container-show {
+	width: 67px;
+	transition: all 1s ease-in-out;
+}
+
+.share-container img {
+	height: 100%;
+	width: 100%;
+	transition: all 1s ease-in-out;
+}
+
+.back{
+	width: 2em;
+	margin-bottom: -2.5em;
+	margin-left: -2em;
+}
+
+
+#pieChart{
+	margin: 0 auto;
+	display: block;
+	width: 1440px;
+	background-color: #EFEFEF;
+}
+.results-text{
+	margin: 3em 0 3em 6em;
+	max-width: 40em;
+}
+
+#p0_segmentMainLabel0-outer, #p0_segmentMainLabel4-outer, #p0_segmentMainLabel8-outer {
+	font-weight: 700;
+}
+

@@ -1,0 +1,62 @@
+var userData = [
+			{
+				"label": "ZOWP",
+				"value": 8,
+				"color": "#66b661"
+			},
+			{
+				"label": "Windpark N33",
+				"value": 5,
+				"color": "#66b661"
+			},
+			{
+				"label": "Windpark Fryslan",
+				"value": 2,
+				"color": "#66b661"
+			},
+			{
+				"label": "Nobelwind",
+				"value": 3,
+				"color": "#66b661"
+			},
+			{
+				"label": "Hollandse Kust Zuid / Hollandse Kust Noord",
+				"value": 0,
+				"color": "#66b661"
+			},
+			{
+				"label": "Borssele Wind Farm Zone",
+				"value": 2,
+				"color": "#66b661"
+			},
+			{
+				"label": "Windmolen Park Westermeer",
+				"value": 3,
+				"color": "#66b661"
+			},
+			{
+				"label": "Gemini ",
+				"value": 0,
+				"color": "#66b661"
+			},
+			{
+				"label": "Ontwikkeling Getijstroom Den Oever ",
+				"value": 6,
+				"color": "#52abd6"
+			},
+			{
+				"label": "Spaarbekkencentrale/ waterkrachtcentrale ",
+				"value": 5,
+				"color": "#52abd6"
+			},
+			{
+				"label": "Drijvende zonnepanelen Maasvlakte",
+				"value": 3,
+				"color": "#f7da48"
+			},
+			{
+				"label": "Alle huizen energieneutraal",
+				"value": 18,
+				"color": "#f7da48"
+			}
+		]
