@@ -6,6 +6,12 @@ var byId 	 = function(id) { return document.getElementById( id ); },
 	byQuery  = function(query) { return document.querySelector( query ); },
 	byQueryA = function(queryA) { return document.querySelectorAll( queryA ); },
 
+	wind  = byId("wind"),
+	water = byId("water"),
+	sun	  = byId("sun"),
+	moneyIcon = "img/euro.png",
+	energyIcon = "img/energy.png",
+
 
 	svgArray = byQueryA(".layer"),
 	projectSelect = byId("projectSelect"),
@@ -35,6 +41,8 @@ var byId 	 = function(id) { return document.getElementById( id ); },
 ;
 
 
+
+
 // Load all the project data from the ID from the checkbox/mapicon
 var loadProjectDataObject = function (checkedBox) {
 
@@ -61,6 +69,61 @@ var commafy = function (num) {
     }
     return str.join('.');
 }
+
+// create an icon for energy gain
+var mkEnergy = function() {
+	var energyImg = document.createElement("img");
+		energyImg.setAttribute("src", energyIcon);
+	return energyImg;
+};
+
+// create an icon for cost of a project
+var mkMoney = function() {
+	var moneyImg = document.createElement("img");
+		moneyImg.setAttribute("src", moneyIcon);
+	return moneyImg;
+};
+
+// create the list of projects form the data
+var makeCheckbox = function () {
+
+	for (var i = 0; i < projectData.length; i++) {
+	
+		var type = projectData[i].energyType;
+
+		var label = document.createElement("label");
+
+		var input = document.createElement("input");
+			input.setAttribute("type", "checkbox");
+			input.setAttribute("name", projectData[i].ID);
+
+		var span = document.createElement("span");
+			span.innerHTML = projectData[i].name;
+
+		label.appendChild(input);
+		label.appendChild(span);
+		label.appendChild(mkMoney());
+
+		if (projectData[i].cost.length == 10) {
+			label.appendChild(mkMoney());
+		} else if (projectData[i].cost.length > 10) {
+			label.appendChild(mkMoney());
+			label.appendChild(mkMoney());
+		}
+
+		label.appendChild(mkEnergy());
+
+		if (projectData[i].energyGain.length == 7) {
+			label.appendChild(mkEnergy());
+		} else if (projectData[i].energyGain.length > 7) {
+			label.appendChild(mkEnergy());
+			label.appendChild(mkEnergy());
+		}
+
+		window[type].appendChild(label);
+
+	};
+};
 
 
 
@@ -239,9 +302,8 @@ var addProjectInfo = function (checkedBox) {
 
 
 
-
-
 // JS is loaded, now start the event listeners!
+makeCheckbox();
 attachCheackboxHandlers();
 attachMapHandlers();
 
